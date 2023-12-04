@@ -67,13 +67,13 @@
    > ```
    > #### Привожу аргумент к виду `name  = "example_${random_password.random_string.result}"`, и получаю:
    > ```bash
-   > root@debian:/home/baldin/01_terraform# terraform validate
+   > root@debian:/home/gorbachev/01_terraform# terraform validate
    > Success! The configuration is valid.
    > ```
 
 5. Выполните код. В качестве ответа приложите вывод команды ```docker ps```
    > ```bash
-   > root@debian:/home/baldin/01_terraform# docker ps
+   > root@debian:/home/gorbachev/01_terraform# docker ps
    > CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                  NAMES
    > eda22daa2347   f9c14fe76d50   "/docker-entrypoint.…"   14 seconds ago   Up 12 seconds   0.0.0.0:8000->80/tcp   example_iZBISwVzK3oB7m6v
    > ```
@@ -84,7 +84,7 @@
    > #### Очевидно, опасность применения `-auto-approve` в том, что у нас в этом случае нет возможности посмотреть план, все изменения, которые внесет `apply`. Последствия    
    > могут быть необратимыми. Прилагаю вывод `docker ps`:
    > ```bash
-   > root@debian:/home/baldin/01_terraform# docker ps
+   > root@debian:/home/gorbachev/01_terraform# docker ps
    > CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                  NAMES
    > b093e9c28b02   f9c14fe76d50   "/docker-entrypoint.…"   6 seconds ago   Up 5 seconds   0.0.0.0:8000->80/tcp   hello_world
    > ```
